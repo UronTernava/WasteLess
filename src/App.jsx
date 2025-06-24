@@ -112,14 +112,14 @@ function App() {
       if ((pageMode === "Pantry" && target === "Receipt") || (pageMode === "Receipt" && target === "Pantry")) {
         setActive(target);
         setPageMode(target);
-      } else {
-        setActive("Dashboard");
-        setPageMode("main");
-        setTimeout(() => {
-          if (target === "Scan") scrollToScan();
+    } else {
+      setActive("Dashboard");
+      setPageMode("main");
+      setTimeout(() => {
+        if (target === "Scan") scrollToScan();
           else if (target === "Dashboard") scrollToDashboard();
           else if (target === "Home") window.scrollTo({ top: 0, behavior: "smooth" });
-        }, 100);
+      }, 100);
       }
     }
   };
